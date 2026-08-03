@@ -6,9 +6,9 @@ public class RegisterAccount {
     private String submitPassword;
 
     public RegisterAccount(String email, String password, String submitPassword) {
-        this.submitPassword = submitPassword;
-        this.password = password;
         this.email = email;
+        this.password = password;
+        this.submitPassword = submitPassword;
     }
 
     public RegisterAccount() {
@@ -36,5 +36,14 @@ public class RegisterAccount {
 
     public void setSubmitPassword(String submitPassword) {
         this.submitPassword = submitPassword;
+    }
+
+    @Override
+    public String toString() {
+        return "RegisterAccount{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", submitPassword='" + submitPassword + '\'' +
+                '}';
     }
 }

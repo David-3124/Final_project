@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -29,5 +30,13 @@ public class RegistrationPageDoska {
 
     public void clickAlreadyAccount() {
         alreadyAccountButton.click();
+    }
+
+    public void waitForErrorMessage(String expectedText) {
+        $x("//*[contains(text(),'" + expectedText + "')]").shouldBe(Condition.visible);
+    }
+
+    public boolean isErrorMessageDisplayed(String expectedText) {
+        return $x("//*[contains(text(),'" + expectedText + "')]").isDisplayed();
     }
 }

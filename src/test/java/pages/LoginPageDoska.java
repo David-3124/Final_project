@@ -11,11 +11,13 @@ public class LoginPageDoska {
     private final SelenideElement noAccountButton = $x("//button[text()='Нет аккаунта']");
 
     public void setEmail(String email) {
-        emailField.setValue(email);
+        emailField.clear();
+        emailField.sendKeys(email);
     }
 
     public void setPassword(String password) {
-        passwordField.setValue(password);
+        passwordField.clear();
+        passwordField.sendKeys(password);
     }
 
     public void clickLogIn() {
