@@ -66,6 +66,6 @@ public class RegistrationSteps {
     public void verifyErrorMessage(String expectedText) {
         registrationPage.waitForErrorMessage(expectedText);
         assertTrue(registrationPage.isErrorMessageDisplayed(expectedText),
-                "Должно отображаться сообщение об ошибке с текстом: " + expectedText);
+                "Отображаться сообщение об ошибке с текстом: " + expectedText);
     }
 }

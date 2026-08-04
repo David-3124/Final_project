@@ -13,6 +13,7 @@ public class HomePageDoska {
     private final SelenideElement placeAnnouncementButton = $x("//button[text()='Разместить объявление']");
     private final SelenideElement userProfileName = $x("//h3[@class='profileText name' and contains(text(),'User.')]");
     private final SelenideElement logoutButton = $x("//button[@class='spanGlobal btnSmall' and text()='Выйти']");
+    private final SelenideElement profileButton = $x("//button[@class='circleSmall']");
 
     public void clickLoginAndRegistration() {
         loginAndRegistrationButton.click();
@@ -36,5 +37,9 @@ public class HomePageDoska {
 
     public void clickLogout() {
         logoutButton.click();
+    }
+
+    public void clickProfile() {
+        profileButton.click();
     }
 }
