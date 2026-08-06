@@ -37,13 +37,4 @@ public class RegisterAccount {
     public void setSubmitPassword(String submitPassword) {
         this.submitPassword = submitPassword;
     }
-
-    @Override
-    public String toString() {
-        return "RegisterAccount{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", submitPassword='" + submitPassword + '\'' +
-                '}';
-    }
 }

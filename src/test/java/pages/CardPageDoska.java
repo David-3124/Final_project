@@ -15,12 +15,4 @@ public class CardPageDoska {
     public void clickDeleteAd() {
         deleteAdButton.click();
     }
-
-    public boolean isEditAdButtonVisible() {
-        return editAdButton.isDisplayed();
-    }
-
-    public boolean isDeleteAdButtonVisible() {
-        return deleteAdButton.isDisplayed();
-    }
 }

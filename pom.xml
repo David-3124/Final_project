@@ -100,6 +100,9 @@
                         <include>**/*Tests.java</include>
                         <include>**/*Runner.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/surefire-reports</allure.results.directory>
+                    </systemPropertyVariables>
                     <properties>
                         <configurationParameters>
                             cucumber.junit-platform.naming-strategy=long

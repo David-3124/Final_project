@@ -8,13 +8,13 @@ public class TestDataGeneratorHelper {
 
     private static final Random random = new Random();
 
-    private String name = "Продаю книгу";
+    private String name = generateName("Продаю книгу");
     private String category = "Книги";
     private String condition = "БУ";
     private String city = "Новосибирск";
-    private String description = "Старая книга";
-    private String price = "10000";
-    private String updatedName = "Новая книга";
+    private String description = generateName("Старая книга");
+    private String price = String.valueOf(1000 + random.nextInt(90000));
+    private String updatedName = generateName("Новая книга");
 
     public static String generateEmail() {
         return "email" + random.nextInt(10000) + "@yandex.ru";
@@ -22,6 +22,10 @@ public class TestDataGeneratorHelper {
 
     public static String generatePassword() {
         return "password" + random.nextInt(10000);
+    }
+
+    public static String generateName(String base) {
+        return base + "_" + random.nextInt(10000);
     }
 
     public static RegisterAccount generateRegisterAccount() {
