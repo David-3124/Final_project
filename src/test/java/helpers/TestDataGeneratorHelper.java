@@ -42,6 +42,10 @@ public class TestDataGeneratorHelper {
         return category;
     }
 
+    public String getCondition() {
+        return condition;
+    }
+
     public String getCity() {
         return city;
     }

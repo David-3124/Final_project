@@ -38,8 +38,9 @@ public class CreateAnnouncementSteps {
         createAdPage.selectCategory(context.getAnnouncement().getCategory());
     }
 
-    @And("пользователь выбирает состояние {string}")
-    public void selectCondition(String condition) {
+    @And("пользователь выбирает состояние")
+    public void selectCondition() {
+        String condition = context.getAnnouncement().getCondition();
         if ("БУ".equals(condition)) {
             createAdPage.selectConditionUsed();
         } else {
